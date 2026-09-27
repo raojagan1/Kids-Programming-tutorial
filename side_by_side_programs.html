@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kids Programming: Python vs C vs C++</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: #223;
+      min-height: 100vh;
+    }
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    .header {
+      background: white;
+      border-radius: 12px;
+      padding: 30px;
+      margin-bottom: 30px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+      text-align: center;
+    }
+    h1 {
+      color: #667eea;
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+    .header p {
+      color: #666;
+      font-size: 1.1em;
+    }
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 25px;
+      margin-bottom: 25px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+    }
+    .card h2 {
+      color: #667eea;
+      border-bottom: 3px solid #667eea;
+      padding-bottom: 10px;
+      margin-bottom: 15px;
+    }
+    .description {
+      background: #f0f4ff;
+      padding: 15px;
+      border-left: 4px solid #667eea;
+      margin-bottom: 20px;
+      border-radius: 5px;
+      color: #333;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+    .lang {
+      background: #f8f9fa;
+      border: 2px solid #e9ecef;
+      border-radius: 10px;
+      padding: 15px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .lang:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(102, 126, 234, 0.2);
+      border-color: #667eea;
+    }
+    .lang h3 {
+      color: #667eea;
+      margin-bottom: 10px;
+      font-size: 1.2em;
+      text-align: center;
+    }
+    pre {
+      background: #1e1e1e;
+      color: #d4d4d4;
+      padding: 15px;
+      border-radius: 8px;
+      overflow-x: auto;
+      font-size: 13px;
+      line-height: 1.6;
+    }
+    code {
+      font-family: 'Courier New', Courier, monospace;
+    }
+    .example-input, .example-output {
+      background: #fff3cd;
+      padding: 10px;
+      border-radius: 5px;
+      margin-top: 10px;
+      font-size: 12px;
+    }
+    .example-output {
+      background: #d4edda;
+    }
+    footer {
+      text-align: center;
+      color: white;
+      margin-top: 50px;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>🎓 Kids Programming Tutorial</h1>
+      <p>Learn Programming by Comparing Python, C, and C++</p>
+    </div>
+
+    <div class="card">
+      <h2>1. Hello World - Your First Program!</h2>
+      <div class="description">
+        <strong>What it does:</strong> This is the simplest program ever! It prints a greeting message. Every programmer learns this as their first program.
+      </div>
+      <div class="grid">
+        <div class="lang">
+          <h3>🐍 Python</h3>
+          <pre><code>print("Hello, kids!")</code></pre>
+          <div class="example-output">Output: Hello, kids!</div>
+        </div>
+        <div class="lang">
+          <h3>🔧 C</h3>
+          <pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    printf("Hello, kids!\n");
+    return 0;
+}</code></pre>
+          <div class="example-output">Output: Hello, kids!</div>
+        </div>
+        <div class="lang">
+          <h3>⚙️ C++</h3>
+          <pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    cout &lt;&lt; "Hello, kids!" &lt;&lt; endl;
+    return 0;
+}</code></pre>
+          <div class="example-output">Output: Hello, kids!</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>2. Add Two Numbers - Simple Math</h2>
+      <div class="description">
+        <strong>What it does:</strong> This program takes two numbers (5 and 7) and adds them together. Notice how different languages require different setup, but the logic is the same!
+      </div>
+      <div class="grid">
+        <div class="lang">
+          <h3>🐍 Python</h3>
+          <pre><code>a = 5
+b = 7
+sum = a + b
+print("Sum:", sum)</code></pre>
+          <div class="example-output">Output: Sum: 12</div>
+        </div>
+        <div class="lang">
+          <h3>🔧 C</h3>
+          <pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    int a = 5, b = 7, sum;
+    sum = a + b;
+    printf("Sum: %d\n", sum);
+    return 0;
+}</code></pre>
+          <div class="example-output">Output: Sum: 12</div>
+        </div>
+        <div class="lang">
+          <h3>⚙️ C++</h3>
+          <pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int a = 5, b = 7, sum;
+    sum = a + b;
+    cout &lt;&lt; "Sum: " &lt;&lt; sum &lt;&lt; endl;
+    return 0;
+}</code></pre>
+          <div class="example-output">Output: Sum: 12</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>3. Check Even or Odd - Making Decisions</h2>
+      <div class="description">
+        <strong>What it does:</strong> This program uses an IF statement to decide whether a number is even (divisible by 2) or odd. The % symbol means "remainder".
+      </div>
+      <div class="grid">
+        <div class="lang">
+          <h3>🐍 Python</h3>
+          <pre><code>n = 7
+if n % 2 == 0:
+    print("Even")
+else:
+    print("Odd")</code></pre>
+          <div class="example-output">Output: Odd</div>
+        </div>
+        <div class="lang">
+          <h3>🔧 C</h3>
+          <pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    int n = 7;
+    if (n % 2 == 0) {
+        printf("Even\n");
+    } else {
+        printf("Odd\n");
+    }
+    return 0;
+}</code></pre>
+          <div class="example-output">Output: Odd</div>
+        </div>
+        <div class="lang">
+          <h3>⚙️ C++</h3>
+          <pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int n = 7;
+    if (n % 2 == 0) {
+        cout &lt;&lt; "Even" &lt;&lt; endl;
+    } else {
+        cout &lt;&lt; "Odd" &lt;&lt; endl;
+    }
+    return 0;
+}</code></pre>
+          <div class="example-output">Output: Odd</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>4. Print Numbers 1 to 10 - Introduction to Loops</h2>
+      <div class="description">
+        <strong>What it does:</strong> A LOOP repeats code multiple times. This program uses a FOR loop to count from 1 to 10. Without loops, you'd have to write print() 10 times!
+      </div>
+      <div class="grid">
+        <div class="lang">
+          <h3>🐍 Python</h3>
+          <pre><code>for i in range(1, 11):
+    print(i)</code></pre>
+          <div class="example-output">Output: 1 2 3 4 5 6 7 8 9 10</div>
+        </div>
+        <div class="lang">
+          <h3>🔧 C</h3>
+          <pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    for (int i = 1; i &lt;= 10; i++) {
+        printf("%d\n", i);
+    }
+    return 0;
+}</code></pre>
+          <div class="example-output">Output: 1 2 3 4 5 6 7 8 9 10</div>
+        </div>
+        <div class="lang">
+          <h3>⚙️ C++</h3>
+          <pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    for (int i = 1; i &lt;= 10; i++) {
+        cout &lt;&lt; i &lt;&lt; endl;
+    }
+    return 0;
+}</code></pre>
+          <div class="example-output">Output: 1 2 3 4 5 6 7 8 9 10</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>5. Calculate Factorial - Loops with Math</h2>
+      <div class="description">
+        <strong>What it does:</strong> Factorial of 5 means 5 × 4 × 3 × 2 × 1. This program multiplies numbers together using a loop.
+      </div>
+      <div class="grid">
+        <div class="lang">
+          <h3>🐍 Python</h3>
+          <pre><code>n = 5
+factorial = 1
+for i in range(1, n + 1):
+    factorial = factorial * i
+print(f"{n}! = {factorial}")</code></pre>
+          <div class="example-output">Output: 5! = 120</div>
+        </div>
+        <div class="lang">
+          <h3>🔧 C</h3>
+          <pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    int n = 5;
+    int factorial = 1;
+    for (int i = 1; i &lt;= n; i++) {
+        factorial = factorial * i;
+    }
+    printf("%d! = %d\n", n, factorial);
+    return 0;
+}</code></pre>
+          <div class="example-output">Output: 5! = 120</div>
+        </div>
+        <div class="lang">
+          <h3>⚙️ C++</h3>
+          <pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int n = 5;
+    int factorial = 1;
+    for (int i = 1; i &lt;= n; i++) {
+        factorial = factorial * i;
+    }
+    cout &lt;&lt; n &lt;&lt; "! = " &lt;&lt; factorial &lt;&lt; endl;
+    return 0;
+}</code></pre>
+          <div class="example-output">Output: 5! = 120</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>6. Print Multiplication Table - Nested Loops</h2>
+      <div class="description">
+        <strong>What it does:</strong> A NESTED loop means loops inside loops. This prints the multiplication table for 5 (5×1, 5×2, 5×3... up to 5×10).
+      </div>
+      <div class="grid">
+        <div class="lang">
+          <h3>🐍 Python</h3>
+          <pre><code>n = 5
+for i in range(1, 11):
+    result = n * i
+    print(f"{n} × {i} = {result}")</code></pre>
+          <div class="example-output">Output: 5 × 1 = 5, 5 × 2 = 10, ... 5 × 10 = 50</div>
+        </div>
+        <div class="lang">
+          <h3>🔧 C</h3>
+          <pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    int n = 5;
+    for (int i = 1; i &lt;= 10; i++) {
+        printf("%d × %d = %d\n", n, i, n*i);
+    }
+    return 0;
+}</code></pre>
+          <div class="example-output">Output: 5 × 1 = 5, 5 × 2 = 10, ... 5 × 10 = 50</div>
+        </div>
+        <div class="lang">
+          <h3>⚙️ C++</h3>
+          <pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int n = 5;
+    for (int i = 1; i &lt;= 10; i++) {
+        cout &lt;&lt; n &lt;&lt; " × " &lt;&lt; i &lt;&lt; " = " 
+             &lt;&lt; n*i &lt;&lt; endl;
+    }
+    return 0;
+}</code></pre>
+          <div class="example-output">Output: 5 × 1 = 5, 5 × 2 = 10, ... 5 × 10 = 50</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>7. Find Maximum of Three Numbers - Nested If Statements</h2>
+      <div class="description">
+        <strong>What it does:</strong> This program compares three numbers and finds which one is the biggest. It uses nested IF statements to make multiple decisions.
+      </div>
+      <div class="grid">
+        <div class="lang">
+          <h3>🐍 Python</h3>
+          <pre><code>a, b, c = 10, 25, 15
+if a &gt; b and a &gt; c:
+    print(f"Max: {a}")
+elif b &gt; a and b &gt; c:
+    print(f"Max: {b}")
+else:
+    print(f"Max: {c}")</code></pre>
+          <div class="example-output">Output: Max: 25</div>
+        </div>
+        <div class="lang">
+          <h3>🔧 C</h3>
+          <pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    int a=10, b=25, c=15;
+    int max = a;
+    if (b &gt; max) max = b;
+    if (c &gt; max) max = c;
+    printf("Max: %d\n", max);
+    return 0;
+}</code></pre>
+          <div class="example-output">Output: Max: 25</div>
+        </div>
+        <div class="lang">
+          <h3>⚙️ C++</h3>
+          <pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int a=10, b=25, c=15;
+    int max = a;
+    if (b &gt; max) max = b;
+    if (c &gt; max) max = c;
+    cout &lt;&lt; "Max: " &lt;&lt; max &lt;&lt; endl;
+    return 0;
+}</code></pre>
+          <div class="example-output">Output: Max: 25</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>8. Sum of Numbers 1 to 100 - While Loop</h2>
+      <div class="description">
+        <strong>What it does:</strong> Instead of a FOR loop, this uses a WHILE loop. It adds all numbers from 1 to 100. The formula is: 1+2+3+...+100 = 5050
+      </div>
+      <div class="grid">
+        <div class="lang">
+          <h3>🐍 Python</h3>
+          <pre><code>i = 1
+sum = 0
+while i &lt;= 100:
+    sum = sum + i
+    i = i + 1
+print(f"Sum: {sum}")</code></pre>
+          <div class="example-output">Output: Sum: 5050</div>
+        </div>
+        <div class="lang">
+          <h3>🔧 C</h3>
+          <pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    int i = 1, sum = 0;
+    while (i &lt;= 100) {
+        sum = sum + i;
+        i++;
+    }
+    printf("Sum: %d\n", sum);
+    return 0;
+}</code></pre>
+          <div class="example-output">Output: Sum: 5050</div>
+        </div>
+        <div class="lang">
+          <h3>⚙️ C++</h3>
+          <pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int i = 1, sum = 0;
+    while (i &lt;= 100) {
+        sum = sum + i;
+        i++;
+    }
+    cout &lt;&lt; "Sum: " &lt;&lt; sum &lt;&lt; endl;
+    return 0;
+}</code></pre>
+          <div class="example-output">Output: Sum: 5050</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>9. Count Digits in a Number - Breaking Down Problems</h2>
+      <div class="description">
+        <strong>What it does:</strong> This program counts how many digits are in a number. For example, 12345 has 5 digits. It removes one digit at a time using division.
+      </div>
+      <div class="grid">
+        <div class="lang">
+          <h3>🐍 Python</h3>
+          <pre><code>n = 12345
+count = len(str(n))
+print(f"Number of digits: {count}")</code></pre>
+          <div class="example-output">Output: Number of digits: 5</div>
+        </div>
+        <div class="lang">
+          <h3>🔧 C</h3>
+          <pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    int n = 12345;
+    int count = 0;
+    while (n &gt; 0) {
+        count++;
+        n = n / 10;
+    }
+    printf("Number of digits: %d\n", count);
+    return 0;
+}</code></pre>
+          <div class="example-output">Output: Number of digits: 5</div>
+        </div>
+        <div class="lang">
+          <h3>⚙️ C++</h3>
+          <pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int n = 12345;
+    int count = 0;
+    while (n &gt; 0) {
+        count++;
+        n = n / 10;
+    }
+    cout &lt;&lt; "Number of digits: " &lt;&lt; count &lt;&lt; endl;
+    return 0;
+}</code></pre>
+          <div class="example-output">Output: Number of digits: 5</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>10. Reverse a Number - String Manipulation</h2>
+      <div class="description">
+        <strong>What it does:</strong> This program takes a number like 12345 and prints it backwards as 54321. Different languages handle this differently!
+      </div>
+      <div class="grid">
+        <div class="lang">
+          <h3>🐍 Python</h3>
+          <pre><code>n = 12345
+reversed_n = int(str(n)[::-1])
+print(f"Reversed: {reversed_n}")</code></pre>
+          <div class="example-output">Output: Reversed: 54321</div>
+        </div>
+        <div class="lang">
+          <h3>🔧 C</h3>
+          <pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    int n = 12345;
+    int reversed = 0;
+    while (n &gt; 0) {
+        reversed = reversed * 10 + n % 10;
+        n = n / 10;
+    }
+    printf("Reversed: %d\n", reversed);
+    return 0;
+}</code></pre>
+          <div class="example-output">Output: Reversed: 54321</div>
+        </div>
+        <div class="lang">
+          <h3>⚙️ C++</h3>
+          <pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int n = 12345;
+    int reversed = 0;
+    while (n &gt; 0) {
+        reversed = reversed * 10 + n % 10;
+        n = n / 10;
+    }
+    cout &lt;&lt; "Reversed: " &lt;&lt; reversed &lt;&lt; endl;
+    return 0;
+}</code></pre>
+          <div class="example-output">Output: Reversed: 54321</div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p><strong>💡 Key Learning Points:</strong></p>
+      <p>✅ Every program needs a PURPOSE<br>
+      ✅ Python is EASY to read but SLOW<br>
+      ✅ C/C++ are FAST but need more CODE<br>
+      ✅ All languages solve the SAME PROBLEM differently<br>
+      ✅ Practice makes perfect! 🚀</p>
+    </footer>
+  </div>
+</body>
+</html>
